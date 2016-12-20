@@ -1,0 +1,30 @@
+{
+  "name": "rawdom",
+  "version": "1.0.0",
+  "description": "create raw dom objects easily",
+  "main": "rawdom.js",
+  "scripts": {
+    "build": "node_modules/.bin/rollup --format umd -n window -- src/rawdom.js > rawdom.js",
+    "pretest": "node_modules/.bin/rollup --format umd -n window -- testRefUse/testc.js > testRefUse/test.js",
+    "test": "echo \"run testRefUse/test.html in your browser\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ddaghan/rawdom.git"
+  },
+  "keywords": [
+    "raw",
+    "dom",
+    "javascript"
+  ],
+  "author": "Daghan Dinc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ddaghan/rawdom/issues"
+  },
+  "homepage": "https://github.com/ddaghan/rawdom",
+  "devDependencies": {
+    "rollup": "^0.37.0"
+  },
+  "dependencies": {}
+}
