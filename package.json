@@ -1,6 +1,6 @@
 {
   "name": "rawdom",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "create raw dom objects easily",
   "main": "rawdom.js",
   "scripts": {
