@@ -1,5 +1,14 @@
 # rawdom
+
 Create raw dom objects easily:
+
+## install
+
+```sh
+npm install rawdom
+```
+
+## usage
 
 ```javascript
 document.body.appendChild(
@@ -61,7 +70,7 @@ It is umd, thus
 - it can be included globally:
 
 ```html
-<script type="text/javascript" src="../rawdom.js"></script>
+<script type="text/javascript" src="node_modules/rawdom/rawdom.js"></script>
 <script type="text/javascript">
     document.body.appendChild(
         a(
@@ -79,7 +88,7 @@ It is umd, thus
 - it can also be referenced via commonjs or amd:
 
 ```javascript
-import {a, div} from '../src/rawdom';
+import {a, div} from 'rawdom';
 
 document.body.appendChild(
     a(
@@ -92,3 +101,7 @@ document.body.appendChild(
     )
 );
 ```
+
+# License
+
+MIT
