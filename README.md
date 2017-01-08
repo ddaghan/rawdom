@@ -75,8 +75,15 @@ document.body.appendChild(
 
 ```
 
-Above example uses the following node modules:
-rollup, rollup-plugin-node-resolve, rollup-plugin-commonjs
+you can use the boilerplate to see this in detail:
+```sh
+npm install rawdom-boilerplate
+```
+
+for details of the boilerplate:
+
+- https://www.npmjs.com/package/rawdom-boilerplate
+- https://github.com/ddaghan/rawdom-boilerplate
 
 ## api
 
