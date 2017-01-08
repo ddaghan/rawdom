@@ -1,8 +1,8 @@
 {
   "name": "rawdom",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "create raw dom objects easily",
-  "main": "rawdom.js",
+  "main": "rawdom.cjs.js",
   "scripts": {
     "build": "node_modules/.bin/rollup -c",
     "test": "echo \"run testGlobalUse/test.html in your browser\""
@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/ddaghan/rawdom",
   "devDependencies": {
-    "rollup": "^0.37.0"
+    "rollup": "^0.37.0",
+    "rollup-plugin-uglify": "^1.0.1"
   },
   "dependencies": {
     "html-tags": "^1.1.1",

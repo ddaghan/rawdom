@@ -10,26 +10,35 @@ npm install rawdom
 
 ## usage
 
-```javascript
-document.body.appendChild(
-    a(
-        {
-            href: 'https://xkcd.com',
-            target: '_blank',
-            rel: 'noopener noreferrer'
-        },
-        'xkcd comics'
-    )
-);
+### it can be included globally:
+
+```html
+<script type="text/javascript" src="node_modules/rawdom/rawdom.iife.js"></script>
+<script type="text/javascript">
+    document.body.appendChild(
+        a(
+            {
+                href: 'https://xkcd.com',
+                target: '_blank',
+                rel: 'noopener noreferrer'
+            },
+            'xkcd comics'
+        )
+    );
+</script>
 ```
 
 This produces:
 
 <a href="https://xkcd.com" target="_blank" rel="noopener noreferrer">xkcd comics</a>
 
-You can also nest them, and add event listeners:
+see testGlobalUse/test.html
+
+### it can also be used with import:
 
 ```javascript
+import {main,ul,li,a,h1,button} from 'rawdom';
+
 document.body.appendChild(
     main(
         ul(
@@ -62,45 +71,20 @@ document.body.appendChild(
             'click here to alert'
         )
     )
-);
+)
+
 ```
 
-It is umd, thus
+Above example uses the following node modules:
+rollup, rollup-plugin-node-resolve, rollup-plugin-commonjs
 
-- it can be included globally:
+## api
 
-```html
-<script type="text/javascript" src="node_modules/rawdom/rawdom.js"></script>
-<script type="text/javascript">
-    document.body.appendChild(
-        a(
-            {
-                href: 'https://xkcd.com',
-                target: '_blank',
-                rel: 'noopener noreferrer'
-            },
-            'xkcd comics'
-        )
-    );
-</script>
-```
-
-- it can also be referenced via commonjs or amd:
-
-```javascript
-import {a, div} from 'rawdom';
-
-document.body.appendChild(
-    a(
-        {
-            href: 'https://xkcd.com',
-            target: '_blank',
-            rel: 'noopener noreferrer'
-        },
-        'xkcd comics'
-    )
-);
-```
+Every html and svg tag has a corresponding function, which takes any number of parameters where if the parameter is a:
+- json object, members are added as html attributes, including event listeners
+- html element, it is added as child
+- string, it is added as text-node child
+- see examples above.
 
 # License
 
