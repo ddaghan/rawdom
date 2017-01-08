@@ -6,15 +6,16 @@
 
 function createElement(tag) {
     var el;
+    var restParams = Array.prototype.slice.call(arguments,1);
 
     if (typeof tag === 'function') {
-        el = tag();
+        el = tag.apply(null, restParams);
     } else {
         el = document.createElement(tag);
     }
     
-    for (var i = 1; i < arguments.length; ++i) {
-        var childOrProp = arguments[i];
+    for (var i in restParams) {
+        var childOrProp = restParams[i];
         if (childOrProp instanceof HTMLElement) {
             el.appendChild(childOrProp);
         } else if (typeof childOrProp === 'string') {
@@ -46,7 +47,7 @@ var svgTagNames = ["a","altGlyph","altGlyphDef","altGlyphItem","animate","animat
 
 var allTags = htmlTags.concat(svgTagNames);
 
-allTags.forEach((tag) => {
+allTags.forEach(function(tag) {
     exports[tag] = createElement.bind(null, tag);
 });
 
