@@ -13,7 +13,7 @@ npm install rawdom
 ### it can be included globally:
 
 ```html
-<script type="text/javascript" src="node_modules/rawdom/rawdom.iife.js"></script>
+<script type="text/javascript" src="node_modules/rawdom/dist/rawdom.iife.js"></script>
 <script type="text/javascript">
     document.body.appendChild(
         a(
