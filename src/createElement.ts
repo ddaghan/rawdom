@@ -1,7 +1,7 @@
-import {HTMLAttributes} from './htmlAttributes';
-import frag from './frag';
-import addAttributes from './addAttributes';
-import {HtmlTagName} from './htmlTagName';
+import {HTMLAttributes} from './htmlAttributes.js';
+import frag from './frag.js';
+import addAttributes from './addAttributes.js';
+import {HtmlTagName} from './htmlTagName.js';
 
 export type ChildType = HTMLElement | string;
 

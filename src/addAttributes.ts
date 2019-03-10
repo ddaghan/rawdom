@@ -1,4 +1,4 @@
-import {HTMLAttribute, HTMLAttributes} from './htmlAttributes';
+import {HTMLAttribute, HTMLAttributes} from './htmlAttributes.js';
 
 function isEventListener(attrName: string, attrValue: HTMLAttribute): attrValue is EventListenerOrEventListenerObject {
     attrValue;

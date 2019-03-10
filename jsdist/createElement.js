@@ -1,5 +1,5 @@
-import frag from './frag';
-import addAttributes from './addAttributes';
+import frag from './frag.js';
+import addAttributes from './addAttributes.js';
 function createElementWithAttributesAndChildren(tag, attr = {}, ...children) {
     const el = document.createElement(tag);
     addAttributes(el, attr);

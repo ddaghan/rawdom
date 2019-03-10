@@ -1,7 +1,7 @@
-import createElement, {ChildType} from './createElement';
-import {HTMLAttributes} from './htmlAttributes';
-import {HtmlTagName} from './htmlTagName';
-import empty from './empty';
+import createElement, {ChildType} from './createElement.js';
+import {HTMLAttributes} from './htmlAttributes.js';
+import {HtmlTagName} from './htmlTagName.js';
+import empty from './empty.js';
 export {empty};
 
 type CreateHTMLElement = (attrOrChild?: ChildType|HTMLAttributes, ...children: ChildType[]) => HTMLElement;
