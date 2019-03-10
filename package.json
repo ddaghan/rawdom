@@ -1,10 +1,10 @@
 {
   "name": "rawdom",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "create raw dom objects easily",
-  "main": "rawdom.cjs.js",
+  "main": "./dist/rawdom.cjs.js",
   "scripts": {
-    "build": "node_modules/.bin/rollup -c",
+    "build": "cd src; tsc; cd ..; node_modules/.bin/rollup -c",
     "test": "echo \"run testGlobalUse/test.html in your browser\""
   },
   "repository": {
@@ -26,8 +26,5 @@
     "rollup": "^0.37.0",
     "rollup-plugin-uglify": "^1.0.1"
   },
-  "dependencies": {
-    "html-tags": "^1.1.1",
-    "svg-tag-names": "^1.1.0"
-  }
+  "dependencies": {}
 }

@@ -1,16 +1,12 @@
-import uglify from 'rollup-plugin-uglify';
 
 export default {
-  entry: 'src/rawdom.js',
+  entry: './jsdist/rawdom.js',
   moduleName: 'window',
-  sourceMap: true,
-  plugins: [
-      uglify()
-  ],
+  sourceMap: false,
   targets: [
-    { dest: 'rawdom.amd.js', format: 'amd' },
-    { dest: 'rawdom.cjs.js', format: 'cjs' },
-    { dest: 'rawdom.iife.js', format: 'iife' },
-    { dest: 'rawdom.umd.js', format: 'umd' },
+    { dest: 'dist/rawdom.amd.js', format: 'amd' },
+    { dest: 'dist/rawdom.cjs.js', format: 'cjs' },
+    { dest: 'dist/rawdom.iife.js', format: 'iife' },
+    { dest: 'dist/rawdom.umd.js', format: 'umd' },
   ]
 };
