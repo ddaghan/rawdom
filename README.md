@@ -10,7 +10,46 @@ npm install rawdom
 
 ## usage
 
-### it can be included globally:
+### it can be included with es6 import syntax:
+```javascript
+import {main,ul,li,a,h1,button} from './node_modules/rawdom/jsdist/rawdom.js';
+
+document.body.appendChild(
+    main(
+        ul(
+            li(
+                a(
+                    {
+                        href: 'https://xkcd.com',
+                        target: '_blank',
+                        rel: 'noopener noreferrer'
+                    },
+                    'xkcd comics'
+                )
+            ),
+            li(
+                a(
+                    {
+                        href: 'http://phdcomics.com/',
+                        target: '_blank',
+                        rel: 'noopener noreferrer'
+                    },
+                    'phd comics'
+                )
+            )
+        ),
+        h1('Click above links for humor'),
+        button(
+            {
+                onclick: () => {alert('BUTTON CLICKED')}
+            },
+            'click here to alert'
+        )
+    )
+)
+```
+
+### it can be included globally for legacy projects:
 
 ```html
 <script type="text/javascript" src="node_modules/rawdom/dist/rawdom.iife.js"></script>
@@ -34,7 +73,7 @@ This produces:
 
 see testGlobalUse/test.html
 
-### it can also be used with import:
+### it can also be used with import together with webpack, rollup, etc. packaging:
 
 ```javascript
 import {main,ul,li,a,h1,button} from 'rawdom';
@@ -87,7 +126,7 @@ for details of the boilerplate:
 
 ## api
 
-Every html and svg tag has a corresponding function, which takes any number of parameters where if the parameter is a:
+Every html tag has a corresponding function, which takes any number of parameters where if the parameter is a:
 - json object, members are added as html attributes, including event listeners
 - html element, it is added as child
 - string, it is added as text-node child
