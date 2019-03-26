@@ -2,7 +2,8 @@ import createElement, {ChildType} from './createElement.js';
 import {HTMLAttributes} from './htmlAttributes.js';
 import {HtmlTagName} from './htmlTagName.js';
 import empty from './empty.js';
-export {empty};
+import frag from './frag.js';
+export {empty, frag};
 
 type CreateHTMLElement = (attrOrChild?: ChildType|HTMLAttributes, ...children: ChildType[]) => HTMLElement;
 type CreateSelfClosingHTMLElement = (attr?: HTMLAttributes) => HTMLElement;

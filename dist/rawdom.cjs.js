@@ -173,6 +173,7 @@ const track = c('track');
 const wbr = c('wbr');
 
 exports.empty = empty;
+exports.frag = frag;
 exports.a = a;
 exports.abbr = abbr;
 exports.address = address;
